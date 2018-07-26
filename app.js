@@ -78,6 +78,23 @@ app.get("/users/:id", function(req, res){
         } else {
             res.render("show", {user: foundUser});
         }
+        
+        //SMS SEND
+         let text = {
+          // To Number is the number you will be sending the text to.
+          toNumber: foundUser.phone,
+          // From number is the number you will buy from your admin dashboard
+          fromNumber: '+19166337354',
+          // Text Content
+          smsBody: 'Sending SMS using Node.js',
+          //Sign up for an account to get an API Token
+          apiToken: '8rlhzf'
+        };
+
+         puretext.send(text, function (err, response) {
+            if(err) console.log(err);
+            else console.log(response);
+          });
     });
 });
 

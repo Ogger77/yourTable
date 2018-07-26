@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+        <form class="ui form" action="/users" method="POST">
+            <div class="field">
+                <label>Your Name</label>
+                <input type="text" name="user[firstName]" placeholder="firstName">
+            </div>
+            <div class="field">
+                <label>How many people do your party have?</label>
+                <input type="text" name="user[number]" placeholder="number">
+            </div>
+            <div class="field">
+                <label>Phone number</label>
+                <input type="text" name="user[phone]" placeholder="phone number">
+            </div>
+            <div class="field">
+                <label>Note (special needs, high chair)</label>
+                <input type="text" name="user[note]" placeholder="How can we accommodate you">
+            </div>
+            <input class="ui violet big basic button" type="submit">
+        </form>
+</div>
+
+<% include ./partials/footer %>

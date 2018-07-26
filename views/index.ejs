@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header">Welcome to Binh Duong restaurant</div>
+    <a class="ui floated basic violet button" href="/users/new">Check in your party here</a>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% users.forEach(function(user){ %>
+                <div class="item">
+                    <div class="content">
+                        <!--<a class="header" href="/users/<%= user._id %><%= user.number %>"></a>-->
+                        <div class="info">
+                            <%= user.firstName %>
+                            have <%= user.number %> people
+                        </div>
+                        <div class="description">
+                            phone: <%= user.phone %>
+                        </div>
+                         <div class="meta">
+                            <span><%= user.created.toDateString() %></span>
+                            <span> <%= moment(user.createdAt).fromNow() %></span>
+                            <!--add moment-->
+                        </div>
+                        <div class="extra">
+                            <a class="ui floated basic violet button" href="/users/<%= user._id %>">
+                                More info
+                                <i class="right small chevron icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>    
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

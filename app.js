@@ -20,8 +20,6 @@ app.use(expressSanitizer());
 const puretext = require('puretext');
   require('request');
 
-  
-
 //Mongoose/model config
 var userSchema = new mongoose.Schema({
     firstName: {type: String, required: true},
@@ -52,8 +50,6 @@ app.get("/users", function(req, res){
     res.render("index");
 });
 
-
-
 // NEW route
 app.get("/users/new", function(req, res){
     res.render("new");
@@ -82,12 +78,11 @@ app.get("/users/:id", function(req, res){
         //SMS SEND
          let text = {
           // To Number is the number you will be sending the text to.
-          toNumber: foundUser.phone,
+          toNumber: '+1' + foundUser.phone,
           // From number is the number you will buy from your admin dashboard
           fromNumber: '+19166337354',
           // Text Content
-          smsBody: 'Sending SMS using Node.js',
-          //Sign up for an account to get an API Token
+          smsBody: 'Your table is ready. Please see the host within 5 mins', 
           apiToken: '8rlhzf'
         };
 

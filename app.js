@@ -1,15 +1,18 @@
+require("dotenv").config();
+
 var express = require("express"),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
     app = express(),
     methodOverride = require("method-override"),
     expressSanitizer = require("express-sanitizer");
-    
+
 //  MOMENt adding
 app.locals.moment = require("moment");
 
 //App conifg    
-mongoose.connect("mongodb://localhost/your_table");
+var url = process.env.DATABASEURL || "mongodb://localhost/your_table";
+mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));

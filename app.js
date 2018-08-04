@@ -32,7 +32,7 @@ var User = mongoose.model("User", userSchema);
 
 //RESTful route
 app.get("/", function(req, res){
-   res.redirect("/users"); 
+   res.render("landing"); 
 });
 
 // INDEX route
@@ -125,8 +125,6 @@ app.delete("/users/:id", function(req, res){
        }
    });
 });
-
-//SMS route
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("yourTable v2 Sever is running");

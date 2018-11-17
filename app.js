@@ -90,9 +90,9 @@ app.get("/users/new", function(req, res){
 app.post("/users", function(req, res){
     User.create(req.body.user, function(err, newUser){
         if(err){
-            res.render("index");
+            res.render("new");
         } else {
-            res.redirect("landing");
+            res.redirect("/users");
         }
     });
 });

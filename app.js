@@ -12,8 +12,6 @@ var express = require("express"),
     flash = require('express-flash'),
     handlebars = require('express-handlebars'),
     expressSanitizer = require("express-sanitizer");
-    
-var sessionStore = new session.MemoryStore;
 
 //  MOMENt adding
 app.locals.moment = require("moment");
@@ -27,22 +25,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
 
-app.use(cookieParser('secret'));
-app.use(session({
-    cookie: { maxAge: 60000 },
-    store: sessionStore,
-    saveUninitialized: true,
-    resave: 'true',
-    secret: 'secret'
-}));
-app.use(flash());
+// app.use(cookieParser('secret'));
+// app.use(session({
+//     cookie: { maxAge: 60000 },
+//     store: sessionStore,
+//     saveUninitialized: true,
+//     resave: 'true',
+//     secret: 'secret'
+// }));
+// app.use(flash());
 
-app.use(function(req, res, next){
-    // if there's a flash message in the session request, make it available in the response, then delete it
-    res.locals.sessionFlash = req.session.sessionFlash;
-    delete req.session.sessionFlash;
-    next();
-});
+// app.use(function(req, res, next){
+//     // if there's a flash message in the session request, make it available in the response, then delete it
+//     res.locals.sessionFlash = req.session.sessionFlash;
+//     delete req.session.sessionFlash;
+//     next();
+// });
 
 //SMS config
 const puretext = require('puretext');

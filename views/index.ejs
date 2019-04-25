@@ -1,0 +1,45 @@
+<% include ./partials/header %>
+
+<div class="form-group">
+    
+        <div class="ui divided items">
+            <% users.forEach(function(user){ %>
+                <div class=<"item">
+                    <div class="content">
+                        <!--<a class="header" href="/users/<%= user._id %><%= user.number %>"></a>-->
+                        <div class="info">
+                            <%= user.firstName %>
+                            have <strong><%= user.number %></strong> people
+                        </div>
+                        <div class="description">
+                            phone: <%= user.phone %>
+                            <%= user.note %>
+                        </div>
+                         <div class="meta">
+                            <span><%= user.created.toDateString() %></span>
+                            <span> <%= moment(user.createdAt).fromNow() %></span>
+                            <!--add moment-->
+                        </div>
+                        <div class="ui form">
+                            <div class="fields">
+                                <div class="field">
+                                     <a class="ui inverted primary button" href="/users/<%= user._id %>">
+                                    Send SMS
+                                    <i class="right small chevron icon"></i>
+                                </a>
+                                </div>
+                                <div class="fields">
+                                    <form id="delete" action="/users/<%= user._id %>?_method=DELETE" method="POST">
+                                    <button class="ui inverted red button">Delete</button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>    
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

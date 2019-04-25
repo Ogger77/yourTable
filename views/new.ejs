@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div id='form' class='container text-center'>
+    <form action="/users" method="POST">
+        <div class='form-group'>
+            <label for='name'>Your name</label>
+            <input type="text" class='form-control' name="user[firstName]" placeholder="Dinh Vu">
+        </div>
+        <div class='form-group'>
+            <label for='name'>How many people do you have?</label>
+            <input type="text" class='form-control' name="user[number]" placeholder="1">
+        </div>
+        <div class='form-group'>
+            <label for='name'>Phone number</label>
+            <input type="text" class='form-control' name="user[phone]" placeholder="9085026197">
+        </div>
+        <div class='form-group'>
+            <label for='name'>How can we accomodate you?</label>
+            <input type="text" class='form-control' name="user[note]" placeholder="Special needs, high chair for kids">
+        </div>
+        <a class='btn btn-outline-light btn-md' href='/users/new'>Submit</a>
+    </form>
+</div>
+
+<% include ./partials/footer %>

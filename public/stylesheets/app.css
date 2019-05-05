@@ -41,9 +41,7 @@ body {
   }
   
   .caption h1 {
-    /* font-size: 3.8rem; */
     font-weight: 650;
-    /* letter-spacing: .1rem; */
     text-shadow: .1rem .1rem .6rem black;
     padding-bottom: 1rem;
   }
@@ -62,7 +60,10 @@ body {
   }
   
 #form{
-    margin-top: 10rem;
+    margin-top: 7rem;
+    color: white;
+    font-weight: 55;
+    font-size: 1.2rem;
 }
 
   

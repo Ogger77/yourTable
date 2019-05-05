@@ -3,6 +3,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: #505962;
     background-image: url(/stylesheets/banner.jpg);
+    background-size: cover;
   }
 
   .navbar {
@@ -53,17 +54,25 @@ body {
   }
   
   .btn-md {
-    border-width:medium;
+    border-width: medium;
     border-radius: 0;
     padding: .6rem 1.3rem;
     font-size: 1.1rem;    
   }
   
-#form{
+#form {
     margin-top: 7rem;
     color: white;
     font-weight: 55;
     font-size: 1.2rem;
+}
+
+/* #delete{
+  margin-left: 14rem;
+} */
+
+#index {
+  margin-top: 7rem;
 }
 
   

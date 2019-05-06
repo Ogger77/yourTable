@@ -3,7 +3,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: #505962;
     background-image: url(/stylesheets/banner.jpg);
-    background-size: cover;
+    background-size: cover over;
   }
 
   .navbar {
@@ -75,4 +75,16 @@ body {
   margin-top: 7rem;
 }
 
-  
+#success{
+  margin-top: 7rem;
+  color: white;
+  font-weight: 55;
+  font-size: 1.2rem;
+}
+
+#head{
+  margin-top: 7rem;
+  color: white;
+  font-weight: 55;
+  font-size: 1.2rem;
+}

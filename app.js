@@ -133,6 +133,7 @@ app.delete("/users/:id", function(req, res){
 
 
 
-app.listen(1337, '127.0.0.1', function(){
+// app.listen(1337, '127.0.0.1', function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("yourTable v2 Sever is running");
 });

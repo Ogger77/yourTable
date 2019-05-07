@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
     /* overflow-x: hidden; */
     font-family: 'Quicksand', sans-serif;
@@ -89,43 +88,3 @@ body {
   font-weight: 55;
   font-size: 1.2rem;
 }
-=======
-.container.main {
-    margin-top: 7.0em;
-}
-
-.landing {
-    background: #1b1c1d;
-}
-
-#top {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-width: 2px;
-    margin-top: 1rem;
-    font-size: 1.07142857rem;
-}
-
-.ui.inverted.button {
-    background: transparent none;
-}
-
-#left {
-    margin-left: -1.7em;
-}
-
-#title {
-    margin-top: 3em;
-    margin-bottom: 0em;
-    font-size: 4em;
-    font-weight: normal;
-    text-align: center;
-}
-
-.ui.header {
-   font-family: 'Raleway', Lato;
-   font-size: 30%;
-}
-
->>>>>>> ae1141329acc428075f4938f66a646c1fe7b0044

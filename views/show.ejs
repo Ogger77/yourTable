@@ -1,10 +1,30 @@
 <% include ./partials/header %>
 
+<<<<<<< HEAD
 <div id='success' class='container text-center'>
     <div class="alert alert-success" role="alert">
         SMS sent successfully
     </div>
     <a class='btn btn-outline-light btn-md' href='/users'>Return</a>
+=======
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= user.firstName %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="content">
+                <span><%= user.created.toDateString() %></span>
+            </div>
+            <div class="description">
+                <%= user.number %>
+                <%= user.phone %> 
+                <%= user.note %>
+            </div>
+            <a class="ui orange basic button" href="/users/<%= user._id %>/edit">Edit</a>
+            <form id="delete" action="/users/<%= user._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+        </div>
+    </div>
+>>>>>>> ae1141329acc428075f4938f66a646c1fe7b0044
 </div>
 
 <% include ./partials/footer %>
